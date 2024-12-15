@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web</title>
+    <style>
+        /* Estilo para el fondo */
+        .fondo {
+            background-color: pink;
+            font-family: cursive;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo para el contenedor */
+        .contenedor {
+            background-color: white;
+            height: 400px;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el botón */
+        .submit {
+            color: black;
+            background-color: pink;
+            border-radius: 5px;
+            height: 50px;
+            width: 200px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilo para la imagen (si la quieres incluir más adelante) */
+        .imagen {
+            height: 150px;
+        }
+
+        /* Estilo para la frase */
+        .frase {
+            font-size: 20px;
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body class="fondo">
+
+    <div class="contenedor">
+        <!-- Botón para cargar la página nuevamente -->
+        <button class="submit" onclick="mostrarMensaje()">Presiónalo</button>
+
+        <!-- Espacio para el mensaje -->
+        <div class="frase" id="mensaje"></div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            // Aquí cambiaremos el contenido de la página
+            document.querySelector('.contenedor').innerHTML = `
+                <div class="contenedor">
+                    <div class="frase">¿Quieres salir a ver los alumbrados?</div>
+                    
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
